@@ -28,4 +28,8 @@ def puzzlehome():
 def devpage():
   return render_template('dev.html')
 
+@app.route('/html/<int:postID>')
+def htmlTutorial(postID):
+  return render_template(f'htmlT{postID}.html')
+
 app.run(host='0.0.0.0', threaded=True)
